@@ -1,7 +1,7 @@
 ---
-name: config-merge
+name: "多环境配置合并校验工具（默认/系统/任务三层）"
 display_name: 配置分层合并校验
-description: 配置分层合并与校验工具。支持 default/system/task 三层优先级合并、字段级校验与自动修正（冲突修复）、配置快照与恢复、两份配置差异对比，以及 dry-run 断言验证。schema 可注入。触发词：配置合并、分层配置、配置校验、配置快照、配置 diff、默认值合并、配置冲突自动修复。
+description: "把 default/system/task 三层配置按优先级合并校验，自动修冲突、出 diff、可回滚。适合 dev/test/prod 多环境管理的后端/运维。"
 market_desc: 多来源配置不再打架——default / system / task 三层自动合并，字段级校验 + 冲突自动修复（比如最大延迟小于最小延迟时自动纠正），还能快照存档、diff 对比、dry-run 预演。做有配置系统的工具/采集器/RPA 时直接复用，零依赖。
 version: 1.0.1
 ---

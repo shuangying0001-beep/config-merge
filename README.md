@@ -1,5 +1,19 @@
-# config-merge
+# 配置分层合并校验 · config-merge
 
-配置分层合并与校验工具。支持 default/system/task 三层优先级合并、字段级校验与自动修正（冲突修复）、配置快照与恢复、两份配置差异对比，以及 dry-run 断言验证。schema 可注入。触发词：配置合并、分层配置、配置校验、配置快照、配置 diff、默认值合并、配置冲突自动修复。
+> 多来源配置不再打架——default / system / task 三层自动合并，字段级校验 + 冲突自动修复，还能快照存档、diff 对比、dry-run 预演。
 
-> AI Agent Skill. SKILL.md 为本技能入口；scripts/references/assets 为配套资源。
+把「默认值 / 系统配置 / 任务配置」三层合并成一份最终配置，自动校验、自动修复冲突（如 `delayMax < delayMin` → 自动纠正），并支持快照与 diff。纯函数实现（Node ESM，零依赖，仅用内置 `node:crypto`），schema 可注入。
+
+## 适用场景
+- 有「全局默认 + 用户设置 + 单次任务参数」三层配置的工具 / 服务
+- 配置冲突需要自动修复
+- 任务前 dry-run 预演、配置版本快照与回归 diff
+
+## 作为 AI 技能使用
+本仓库是一个 AI Agent Skill。将 `SKILL.md` 放入 Agent 的 skills 目录即可启用；`scripts/`、`references/`、`assets/` 为配套资源。
+
+## 许可
+MIT — 可自由用于商业与个人项目。
+
+---
+由教备神器自动发布。欢迎提 PR / Issue。
